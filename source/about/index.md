@@ -1,5 +1,5 @@
 ---
-title: 关于
+title: About
 date: 2025-05-28 00:00:00
 type: about
 ---
