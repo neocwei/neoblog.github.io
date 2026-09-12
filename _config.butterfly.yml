@@ -24,6 +24,12 @@ default_top_img: false
 # 文章内嵌 HTML（B 站 iframe）需要保留
 skip_render:
 
+# 深色模式：默认黑色，保留切换按钮
+darkmode:
+  enable: true
+  button: true
+  autoChangeMode: false
+
 footer:
   owner:
     enable: true
