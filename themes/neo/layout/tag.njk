@@ -1,0 +1,11 @@
+<section class="post-page">
+  <div class="container container-narrow">
+    <h1 class="post-title"># {{ page.title }}</h1>
+    {% for post in page.posts.toArray() %}
+      <a class="post-item" href="{{ url_for(post.path) }}">
+        <h2 class="post-item-title">{{ post.title }}</h2>
+        <time class="post-item-date">{{ date(post.date, 'YYYY.MM.DD') }}</time>
+      </a>
+    {% endfor %}
+  </div>
+</section>
