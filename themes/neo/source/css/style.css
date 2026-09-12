@@ -321,43 +321,31 @@ body {
   margin: 36px 0 4px;
 }
 
-/* ---------- About 页：左标题右正文两栏（仿参考站） ---------- */
+/* ---------- About 页：居中单栏，暗色 ---------- */
 .about-page {
   min-height: calc(100vh - 64px);
-  background: #e2cbd2; /* 比文章页更深一度的灰粉 */
-  padding: 110px 0 130px;
-}
-
-.about-grid {
-  max-width: 1020px;
-  margin: 0 auto;
-  padding: 0 40px;
-  display: grid;
-  grid-template-columns: 1fr 1.15fr;
-  gap: 70px;
-  align-items: center;
+  background: #131019;
+  padding: 80px 0 90px;
 }
 
 .about-heading {
   font-family: var(--serif);
   font-weight: 500;
-  font-size: clamp(3.4rem, 7.5vw, 5.6rem);
-  color: #3c373b;
+  font-size: clamp(3rem, 6.5vw, 4.6rem);
+  color: #ece8f1;
   line-height: 1;
+  text-align: center;
+  margin-bottom: 46px;
 }
 
-.about-content { font-size: 1rem; }
-
-.about-content p { margin: 0 0 0.4em; }
-
-@media (max-width: 760px) {
-  .about-page { padding: 56px 0 72px; }
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    padding: 0 24px;
-  }
+.about-content {
+  font-size: 1.02rem;
+  color: #cfc9d6;
 }
+
+.about-content p { margin: 0 0 1.2em; }
+
+.about-content a { color: #c0a9de; }
 
 /* ---------- 页脚 ---------- */
 .site-footer {
@@ -384,15 +372,18 @@ body.page-archive {
 }
 
 body.page-post .site-header,
-body.page-archive .site-header {
+body.page-archive .site-header,
+body.page-about .site-header {
   background: #1b1724;
 }
 
 body.page-post .site-nav a,
-body.page-archive .site-nav a { color: #b3acb9; }
+body.page-archive .site-nav a,
+body.page-about .site-nav a { color: #b3acb9; }
 
 body.page-post .site-nav a:hover,
-body.page-archive .site-nav a:hover { color: #eeeaf2; }
+body.page-archive .site-nav a:hover,
+body.page-about .site-nav a:hover { color: #eeeaf2; }
 
 body.page-post .site-nav a.active,
 body.page-archive .site-nav a.active { color: #fff; }
@@ -445,4 +436,5 @@ body.page-archive .post-item-title { color: #d9d4df; }
 body.page-archive .post-item:hover .post-item-title { color: #c0a9de; }
 
 body.page-post .site-footer,
-body.page-archive .site-footer { color: #8b8395; }
+body.page-archive .site-footer,
+body.page-about .site-footer { color: #8b8395; }
