@@ -321,6 +321,51 @@ body {
   margin: 36px 0 4px;
 }
 
+/* ---------- About 页 ---------- */
+.about-page {
+  padding: 64px 0 60px;
+  min-height: calc(100vh - 160px);
+  text-align: center;
+}
+
+.about-avatar {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-size: 2.6rem;
+  color: #f0edf3;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(94, 234, 212, 0.55), transparent 60%),
+    radial-gradient(circle at 75% 70%, rgba(129, 140, 248, 0.6), transparent 65%),
+    linear-gradient(150deg, #2e2740, #121017);
+  box-shadow: 0 4px 18px rgba(20, 16, 25, 0.25);
+}
+
+.about-name {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 2rem;
+  color: #453f43;
+}
+
+.about-tagline {
+  color: var(--gray);
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  margin: 8px 0 34px;
+}
+
+.about-content {
+  text-align: left;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding-top: 28px;
+}
+
 /* ---------- 页脚 ---------- */
 .site-footer {
   text-align: center;
