@@ -1,14 +1,15 @@
 <section class="post-page">
   <div class="container container-narrow">
     <h1 class="post-title">Archives</h1>
-    {% for year, posts in site.posts.sort('date', -1).groupBy('date(format="YYYY")') %}
-      <h2 class="archive-year">{{ year }}</h2>
-      {% for post in posts %}
-        <a class="post-item" href="{{ url_for(post.path) }}">
-          <h2 class="post-item-title">{{ post.title }}</h2>
-          <time class="post-item-date">{{ date(post.date, 'YYYY.MM.DD') }}</time>
-        </a>
-      {% endfor %}
+    {% set posts = site.posts.toArray() %}
+    {% for post in posts %}
+      {% if loop.first or date(post.date, 'YYYY') != date(posts[loop.index - 2].date, 'YYYY') %}
+        <h2 class="archive-year">{{ date(post.date, 'YYYY') }}</h2>
+      {% endif %}
+      <a class="post-item" href="{{ url_for(post.path) }}">
+        <h2 class="post-item-title">{{ post.title }}</h2>
+        <time class="post-item-date">{{ date(post.date, 'YYYY.MM.DD') }}</time>
+      </a>
     {% endfor %}
   </div>
 </section>
