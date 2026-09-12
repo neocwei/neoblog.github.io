@@ -4,6 +4,8 @@ date: 2025-05-28 00:00:00
 type: about
 ---
 
-你好，我是 Neo 👋
+Hi, I'm Neo 👋
 
-正在学习编程的路上，边学边记。这个博客记录我的学习笔记、踩坑经验和一些好玩的东西。
+I'm learning to code, one step at a time. This blog is where I tell my stories — notes on learning, failures, interesting things, and the world around me.
+
+*Becoming* — because I'm still on my way to becoming myself.
