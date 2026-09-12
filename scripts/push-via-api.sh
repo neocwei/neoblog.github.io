@@ -2,7 +2,7 @@
 # 用法: zsh scripts/push-via-api.sh <文件1> <文件2> ...
 # 通过 GitHub Contents API 推送文件（本机 git 直连 github.com 不通时的替代通道）
 set -e
-REPO="repos/neocwei/neoblog.github.io/contents"
+REPO="repos/neocwei/neocwei.github.io/contents"
 cd "$(dirname "$0")/.."
 
 enc() { python3 -c "import urllib.parse,sys;print(urllib.parse.quote(sys.argv[1]))" "$1"; }
