@@ -10,7 +10,7 @@
 </head>
 <body class="{% if is_home() %}page-home{% endif %}">
   <header class="site-header">
-    <a class="brand" href="{{ url_for('/') }}">{{ config.title }}</a>
+    <a class="brand" href="{{ url_for('/') }}">{{ theme.brand or config.title }}</a>
     <nav class="site-nav">
       {% for text, url in theme.menu %}
         <a href="{{ url_for(url) }}" {% if is_home() and text == 'Home' %}class="active"{% endif %}>{{ text }}</a>
