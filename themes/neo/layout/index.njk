@@ -1,0 +1,16 @@
+<section class="hero">
+  <h1 class="hero-title">{{ theme.hero_title }}</h1>
+  <p class="hero-subtitle">{{ theme.hero_subtitle }}</p>
+  <div class="hero-scroll">▾</div>
+</section>
+
+<section class="content-list">
+  <div class="container">
+    {% for post in site.posts.toArray() %}
+      <a class="post-item" href="{{ url_for(post.path) }}">
+        <h2 class="post-item-title">{{ post.title }}</h2>
+        <time class="post-item-date">{{ date(post.date, 'YYYY.MM.DD') }}</time>
+      </a>
+    {% endfor %}
+  </div>
+</section>
