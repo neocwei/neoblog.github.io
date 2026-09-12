@@ -13,7 +13,7 @@
     <a class="brand" href="{{ url_for('/') }}">{{ config.title }}</a>
     <nav class="site-nav">
       {% for text, url in theme.menu %}
-        <a href="{{ url_for(url) }}" {% if is_home() and text == '首页' %}class="active"{% endif %}>{{ text }}</a>
+        <a href="{{ url_for(url) }}" {% if is_home() and text == 'Home' %}class="active"{% endif %}>{{ text }}</a>
       {% endfor %}
     </nav>
     <a class="pill" href="{{ theme.github }}" target="_blank" rel="noopener">GitHub</a>
