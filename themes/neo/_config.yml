@@ -1,0 +1,12 @@
+# neo-minimal 主题配置
+menu:
+  首页: /
+  归档: /archives/
+  关于: /about/
+
+github: https://github.com/neocwei
+
+hero_title: neo's blog
+hero_subtitle: 学习笔记、踩坑经验和一些好玩的东西
+
+footer_text: © 2025 neo
