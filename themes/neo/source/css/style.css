@@ -375,3 +375,74 @@ body {
   .pill { padding: 6px 14px; font-size: 0.82rem; }
   .hero { padding: 0 7vw; }
 }
+
+/* ---------- 文章页与归档页：暗色阅读模式 ---------- */
+body.page-post,
+body.page-archive {
+  background: #131019;
+  color: #d9d4df;
+}
+
+body.page-post .site-header,
+body.page-archive .site-header {
+  background: #1b1724;
+}
+
+body.page-post .site-nav a,
+body.page-archive .site-nav a { color: #b3acb9; }
+
+body.page-post .site-nav a:hover,
+body.page-archive .site-nav a:hover { color: #eeeaf2; }
+
+body.page-post .site-nav a.active,
+body.page-archive .site-nav a.active { color: #fff; }
+
+body.page-post .post-page,
+body.page-archive .post-page { background: transparent; }
+
+body.page-post .post-title,
+body.page-archive .post-title,
+body.page-post .post-content h2,
+body.page-post .post-content h3,
+body.page-post .post-content h4 {
+  color: #ece8f1;
+}
+
+body.page-post .post-date,
+body.page-post .post-tags span,
+body.page-archive .post-item-date,
+body.page-archive .archive-year { color: #a29aae; }
+
+body.page-post .post-content { color: #cfc9d6; }
+
+body.page-post .post-content a { color: #c0a9de; }
+
+body.page-post .post-content blockquote {
+  border-left-color: #6e5f8e;
+  background: rgba(255, 255, 255, 0.05);
+  color: #b3acb9;
+}
+
+body.page-post .post-content code {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+body.page-post .post-content pre {
+  background: #1e1a28;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+body.page-post .post-content th,
+body.page-post .post-content td {
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+body.page-post .post-nav a { color: #a295b4; }
+body.page-post .post-nav a:hover { color: #c0a9de; }
+
+body.page-archive .post-item { border-bottom-color: rgba(255, 255, 255, 0.09); }
+body.page-archive .post-item-title { color: #d9d4df; }
+body.page-archive .post-item:hover .post-item-title { color: #c0a9de; }
+
+body.page-post .site-footer,
+body.page-archive .site-footer { color: #8b8395; }
