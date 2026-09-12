@@ -82,7 +82,7 @@ body {
   z-index: 10;
 }
 
-/* ---------- 首页 hero ---------- */
+/* ---------- 首页 hero：极光夜空 ---------- */
 .hero {
   min-height: 88vh;
   display: flex;
@@ -90,24 +90,65 @@ body {
   justify-content: center;
   padding: 0 8vw;
   position: relative;
-  background:
-    radial-gradient(ellipse at 65% 25%, rgba(126, 104, 148, 0.5), transparent 55%),
-    radial-gradient(ellipse at 20% 80%, rgba(80, 66, 100, 0.55), transparent 60%),
-    linear-gradient(165deg, #2e2740 0%, #1b1626 50%, #121017 100%);
+  overflow: hidden;
+  background: linear-gradient(175deg, #0a0f24 0%, #070a18 55%, #05070f 100%);
 }
+
+/* 两层大光斑模拟 macOS 极光壁纸 */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: -35%;
+  filter: blur(70px);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.hero::before {
+  background:
+    radial-gradient(38% 52% at 28% 30%, rgba(94, 234, 212, 0.42), transparent 70%),
+    radial-gradient(46% 60% at 68% 38%, rgba(129, 140, 248, 0.48), transparent 72%),
+    radial-gradient(50% 58% at 52% 74%, rgba(56, 130, 246, 0.42), transparent 70%);
+  animation: aurora-a 28s ease-in-out infinite alternate;
+}
+
+.hero::after {
+  background:
+    radial-gradient(44% 58% at 62% 32%, rgba(167, 139, 250, 0.38), transparent 70%),
+    radial-gradient(38% 48% at 22% 66%, rgba(45, 212, 191, 0.32), transparent 70%);
+  animation: aurora-b 22s ease-in-out infinite alternate;
+}
+
+@keyframes aurora-a {
+  from { transform: translate(-8%, -5%) rotate(-4deg) scale(1); }
+  to   { transform: translate(7%, 6%) rotate(5deg) scale(1.12); }
+}
+
+@keyframes aurora-b {
+  from { transform: translate(6%, 5%) rotate(3deg) scale(1.1); }
+  to   { transform: translate(-7%, -6%) rotate(-5deg) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero::before, .hero::after { animation: none; }
+}
+
+.hero > * { position: relative; z-index: 1; }
 
 .hero-title {
   font-family: var(--serif);
   font-weight: 400;
   font-size: clamp(3.4rem, 11.5vw, 7.8rem);
-  color: #dcd6de;
+  color: #e6e3ee;
   letter-spacing: 1px;
   line-height: 1.1;
+  text-shadow: 0 2px 30px rgba(10, 15, 36, 0.55);
 }
 
 .hero-subtitle {
   margin-top: 26px;
-  color: #b4abb9;
+  color: #c3c9dd;
   font-size: 1.1rem;
   font-weight: 300;
   letter-spacing: 0.5px;
