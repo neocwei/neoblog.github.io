@@ -321,49 +321,42 @@ body {
   margin: 36px 0 4px;
 }
 
-/* ---------- About 页 ---------- */
+/* ---------- About 页：左标题右正文两栏（仿参考站） ---------- */
 .about-page {
-  padding: 64px 0 60px;
-  min-height: calc(100vh - 160px);
-  text-align: center;
+  min-height: calc(100vh - 64px);
+  background: #e2cbd2; /* 比文章页更深一度的灰粉 */
+  padding: 110px 0 130px;
 }
 
-.about-avatar {
-  width: 96px;
-  height: 96px;
-  margin: 0 auto 18px;
-  border-radius: 50%;
-  display: flex;
+.about-grid {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 70px;
   align-items: center;
-  justify-content: center;
-  font-family: var(--serif);
-  font-size: 2.6rem;
-  color: #f0edf3;
-  background:
-    radial-gradient(circle at 30% 30%, rgba(94, 234, 212, 0.55), transparent 60%),
-    radial-gradient(circle at 75% 70%, rgba(129, 140, 248, 0.6), transparent 65%),
-    linear-gradient(150deg, #2e2740, #121017);
-  box-shadow: 0 4px 18px rgba(20, 16, 25, 0.25);
 }
 
-.about-name {
+.about-heading {
   font-family: var(--serif);
   font-weight: 500;
-  font-size: 2rem;
-  color: #453f43;
+  font-size: clamp(3.4rem, 7.5vw, 5.6rem);
+  color: #3c373b;
+  line-height: 1;
 }
 
-.about-tagline {
-  color: var(--gray);
-  font-size: 0.95rem;
-  letter-spacing: 0.5px;
-  margin: 8px 0 34px;
-}
+.about-content { font-size: 1rem; }
 
-.about-content {
-  text-align: left;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-  padding-top: 28px;
+.about-content p { margin: 0 0 0.4em; }
+
+@media (max-width: 760px) {
+  .about-page { padding: 56px 0 72px; }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 24px;
+  }
 }
 
 /* ---------- 页脚 ---------- */
