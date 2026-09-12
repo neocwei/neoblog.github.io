@@ -1,0 +1,298 @@
+/* neo-minimal —— 仿 emerging-adulthood.jimdosite.com 风格 */
+
+:root {
+  --pink: #e9d6dc;        /* 文章页淡粉背景 */
+  --ink: #454043;         /* 正文色 */
+  --gray: #8a7f84;        /* 次要文字 */
+  --dark: #141019;        /* 首页深色底 */
+  --header-gray: #5f5c60; /* 顶栏灰 */
+  --serif: Georgia, "Times New Roman", "Songti SC", "STSong", "SimSun", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+      "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--sans);
+  background: var(--pink);
+  color: var(--ink);
+  line-height: 1.9;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.container-narrow { max-width: 690px; }
+
+/* ---------- 顶栏 ---------- */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  height: 64px;
+  background: var(--header-gray);
+}
+
+.brand {
+  font-size: 0.95rem;
+  color: #f0edef;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.site-nav a {
+  margin-left: 26px;
+  color: #d9d6d9;
+  text-decoration: none;
+  font-size: 0.92rem;
+  padding-bottom: 3px;
+}
+
+.site-nav a:hover { color: #fff; }
+
+.site-nav a.active {
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+}
+
+.pill {
+  background: #8d8a8e;
+  color: #fff;
+  border-radius: 999px;
+  padding: 8px 22px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.pill:hover { background: #6f6c70; }
+
+/* 首页顶栏悬浮在深色首屏上 */
+.page-home .site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  z-index: 10;
+}
+
+/* ---------- 首页 hero ---------- */
+.hero {
+  min-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 8vw;
+  position: relative;
+  background:
+    radial-gradient(ellipse at 65% 25%, rgba(126, 104, 148, 0.5), transparent 55%),
+    radial-gradient(ellipse at 20% 80%, rgba(80, 66, 100, 0.55), transparent 60%),
+    linear-gradient(165deg, #2e2740 0%, #1b1626 50%, #121017 100%);
+}
+
+.hero-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2.8rem, 8vw, 5.2rem);
+  color: #dcd6de;
+  letter-spacing: 1px;
+  line-height: 1.15;
+}
+
+.hero-subtitle {
+  margin-top: 20px;
+  color: #b4abb9;
+  font-size: 1.05rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #a99fb2;
+  font-size: 1.2rem;
+  animation: drift 2.2s ease-in-out infinite;
+}
+
+@keyframes drift {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 8px); }
+}
+
+/* ---------- 文章列表 ---------- */
+.content-list {
+  background: var(--pink);
+  padding: 64px 0 80px;
+}
+
+.post-item {
+  display: block;
+  text-align: center;
+  padding: 26px 12px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.post-item-title {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #4c464a;
+  transition: color 0.2s;
+}
+
+.post-item:hover .post-item-title { color: #96707e; }
+
+.post-item-date {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: var(--gray);
+  letter-spacing: 1px;
+}
+
+/* ---------- 文章页 / 归档 / 关于 ---------- */
+.post-page {
+  padding: 72px 0 60px;
+  min-height: calc(100vh - 160px);
+}
+
+.post-title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 2.1rem;
+  color: #453f43;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.post-date {
+  display: block;
+  text-align: center;
+  color: var(--gray);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 42px;
+}
+
+.post-tags {
+  text-align: center;
+  margin: -28px 0 36px;
+}
+
+.post-tags span {
+  margin: 0 8px;
+  color: var(--gray);
+  font-size: 0.85rem;
+}
+
+.post-content { font-size: 1.02rem; }
+
+.post-content p { margin: 0 0 1.5em; }
+
+.post-content h2, .post-content h3, .post-content h4 {
+  font-family: var(--serif);
+  font-weight: 500;
+  color: #4c464a;
+  margin: 1.8em 0 0.7em;
+}
+
+.post-content a { color: #96707e; }
+
+.post-content img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+.post-content blockquote {
+  border-left: 3px solid #c7a9b4;
+  background: rgba(255, 255, 255, 0.28);
+  padding: 0.6em 1.2em;
+  margin: 1.5em 0;
+  color: #6d6268;
+}
+
+.post-content code {
+  background: rgba(255, 255, 255, 0.55);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.post-content pre {
+  background: #2c2830;
+  color: #e9e5e9;
+  padding: 16px 18px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1.5em 0;
+}
+
+.post-content pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+.post-content table {
+  border-collapse: collapse;
+  margin: 1.5em auto;
+  width: 100%;
+}
+
+.post-content th, .post-content td {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 8px 14px;
+}
+
+.post-content ul, .post-content ol { padding-left: 1.6em; margin-bottom: 1.5em; }
+
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 64px;
+}
+
+.post-nav a {
+  color: #82696f;
+  text-decoration: none;
+  font-size: 0.92rem;
+}
+
+.post-nav a:hover { color: #96707e; }
+.post-nav a.right { margin-left: auto; }
+
+.archive-year {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #8a7078;
+  margin: 36px 0 4px;
+}
+
+/* ---------- 页脚 ---------- */
+.site-footer {
+  text-align: center;
+  padding: 30px 0;
+  font-size: 0.85rem;
+  color: var(--gray);
+  letter-spacing: 0.5px;
+}
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 640px) {
+  .site-header { padding: 0 16px; }
+  .site-nav a { margin-left: 14px; font-size: 0.85rem; }
+  .pill { padding: 6px 14px; font-size: 0.82rem; }
+  .hero { padding: 0 7vw; }
+}
