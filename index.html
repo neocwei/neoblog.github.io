@@ -1,10 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>neo's blog</title>
+    <meta name="description" content="neo 的个人博客：学习记录、代码笔记与生活随笔。" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=522777165&bvid=BV17M411b7NS&cid=964200082&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="site-title" href="#top">neo's blog</a>
+            <nav class="site-nav">
+                <a href="#posts">文章</a>
+                <a href="#about">关于</a>
+                <a href="https://github.com/neocwei" target="_blank" rel="noopener">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="top">
+        <section class="hero">
+            <div class="container">
+                <h1>你好，我是 neo 👋</h1>
+                <p>这里记录我的学习笔记、踩坑经验和一些好玩的东西。</p>
+            </div>
+        </section>
+
+        <section id="posts" class="posts">
+            <div class="container">
+                <h2 class="section-title">文章</h2>
+
+                <article class="post-card">
+                    <h3 class="post-title">一个视频分享</h3>
+                    <time class="post-date" datetime="2025-05-28">2025-05-28</time>
+                    <div class="video-wrapper">
+                        <iframe
+                            src="//player.bilibili.com/player.html?isOutside=true&aid=522777165&bvid=BV17M411b7NS&cid=964200082&p=1"
+                            scrolling="no" border="0" frameborder="no"
+                            framespacing="0" allowfullscreen="true" loading="lazy"
+                            title="Bilibili 视频"></iframe>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">关于</h2>
+                <p>正在学习编程的路上，边学边记。GitHub 上还有几个练习仓库，欢迎交流。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2025 neo · Built with plain HTML &amp; CSS</p>
+        </div>
+    </footer>
 </body>
 </html>
