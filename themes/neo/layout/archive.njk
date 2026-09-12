@@ -1,6 +1,6 @@
 <section class="post-page">
   <div class="container container-narrow">
-    <h1 class="post-title">归档</h1>
+    <h1 class="post-title">Archives</h1>
     {% for year, posts in site.posts.sort('date', -1).groupBy('date(format="YYYY")') %}
       <h2 class="archive-year">{{ year }}</h2>
       {% for post in posts %}
