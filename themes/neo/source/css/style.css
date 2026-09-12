@@ -1,11 +1,12 @@
 /* neo-minimal —— 仿 emerging-adulthood.jimdosite.com 风格 */
 
 :root {
-  --pink: #e9d6dc;        /* 文章页淡粉背景 */
-  --ink: #454043;         /* 正文色 */
-  --gray: #8a7f84;        /* 次要文字 */
-  --dark: #141019;        /* 首页深色底 */
-  --header-gray: #5f5c60; /* 顶栏灰 */
+  --bg: #131019;          /* 全站暗色底 */
+  --surface: #ffffff;     /* 保留：未被暗色模式使用 */
+  --ink: #d9d4df;         /* 正文色（浅） */
+  --gray: #a29aae;        /* 次要文字 */
+  --dark: #141019;
+  --header-gray: #1b1724; /* 顶栏暗色 */
   --serif: Georgia, "Times New Roman", "Songti SC", "STSong", "SimSun", serif;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
       "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
@@ -15,7 +16,7 @@
 
 body {
   font-family: var(--sans);
-  background: var(--pink);
+  background: var(--bg);
   color: var(--ink);
   line-height: 1.9;
 }
@@ -171,7 +172,7 @@ body {
 
 /* ---------- 文章列表 ---------- */
 .content-list {
-  background: var(--pink);
+  background: var(--bg);
   padding: 64px 0 80px;
 }
 
@@ -180,18 +181,18 @@ body {
   text-align: center;
   padding: 26px 12px;
   text-decoration: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
 }
 
 .post-item-title {
   font-family: var(--serif);
   font-size: 1.5rem;
   font-weight: 500;
-  color: #4c464a;
+  color: #d9d4df;
   transition: color 0.2s;
 }
 
-.post-item:hover .post-item-title { color: #96707e; }
+.post-item:hover .post-item-title { color: #c0a9de; }
 
 .post-item-date {
   display: block;
@@ -243,11 +244,11 @@ body {
 .post-content h2, .post-content h3, .post-content h4 {
   font-family: var(--serif);
   font-weight: 500;
-  color: #4c464a;
+  color: #d9d4df;
   margin: 1.8em 0 0.7em;
 }
 
-.post-content a { color: #96707e; }
+.post-content a { color: #c0a9de; }
 
 .post-content img {
   max-width: 100%;
@@ -255,15 +256,15 @@ body {
 }
 
 .post-content blockquote {
-  border-left: 3px solid #c7a9b4;
-  background: rgba(255, 255, 255, 0.28);
+  border-left: 3px solid #6e5f8e;
+  background: rgba(255, 255, 255, 0.05);
   padding: 0.6em 1.2em;
   margin: 1.5em 0;
-  color: #6d6268;
+  color: #b3acb9;
 }
 
 .post-content code {
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.12);
   padding: 2px 6px;
   border-radius: 4px;
   font-size: 0.9em;
@@ -291,7 +292,7 @@ body {
 }
 
 .post-content th, .post-content td {
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   padding: 8px 14px;
 }
 
@@ -310,7 +311,7 @@ body {
   font-size: 0.92rem;
 }
 
-.post-nav a:hover { color: #96707e; }
+.post-nav a:hover { color: #c0a9de; }
 .post-nav a.right { margin-left: auto; }
 
 .archive-year {
