@@ -99,16 +99,16 @@ body {
 .hero-title {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(2.8rem, 8vw, 5.2rem);
+  font-size: clamp(3.4rem, 11.5vw, 7.8rem);
   color: #dcd6de;
   letter-spacing: 1px;
-  line-height: 1.15;
+  line-height: 1.1;
 }
 
 .hero-subtitle {
-  margin-top: 20px;
+  margin-top: 26px;
   color: #b4abb9;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 300;
   letter-spacing: 0.5px;
 }
