@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if page.title %}{{ page.title }} · {{ config.title }}{% else %}{{ config.title }}{% endif %}</title>
   <meta name="description" content="{{ config.description }}">
-  <link rel="stylesheet" href="{{ url_for('css/style.css') }}?v=8">
+  <link rel="stylesheet" href="{{ url_for('css/style.css') }}?v=10">
   <link rel="alternate" type="application/atom+xml" href="{{ url_for('atom.xml') }}">
 </head>
 <body class="{% if is_home() %}page-home{% elif is_post() %}page-post{% elif is_archive() %}page-archive{% elif page.layout == 'about' %}page-about{% endif %}">
