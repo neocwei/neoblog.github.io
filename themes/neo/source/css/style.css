@@ -353,17 +353,28 @@ body {
 .post-nav a.right { margin-left: auto; }
 
 .archive-year {
-  font-family: var(--serif);
-  font-weight: 500;
-  font-size: 1.25rem;
-  color: #8a7078;
-  margin: 36px 0 4px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #d4b483;
+  margin: 38px 0 4px;
+}
+
+.archive-year::before {
+  content: "";
+  width: 42px;
+  height: 1px;
+  background: rgba(212, 180, 131, 0.65);
 }
 
 /* ---------- About 页：居中单栏，暗色 ---------- */
 .about-page {
   min-height: calc(100vh - 64px);
-  background: #131019;
+  background: transparent;
   padding: 80px 0 90px;
 }
 
@@ -404,11 +415,30 @@ body {
 }
 
 /* ---------- 文章页与归档页：暗色阅读模式 ---------- */
-body.page-post,
+/* ---------- 归档页：静夜星空 ---------- */
 body.page-archive {
-  background: #131019;
+  background:
+    radial-gradient(1px 1px at 22px 34px, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 105px 92px, rgba(255, 255, 255, 0.32), transparent),
+    radial-gradient(1.5px 1.5px at 188px 146px, rgba(255, 255, 255, 0.22), transparent),
+    radial-gradient(1px 1px at 64px 158px, rgba(255, 255, 255, 0.28), transparent),
+    radial-gradient(60% 42% at 78% 0%, rgba(129, 140, 248, 0.13), transparent 70%),
+    radial-gradient(46% 34% at 12% 4%, rgba(94, 234, 212, 0.06), transparent 70%),
+    linear-gradient(180deg, #0c1122 0%, #0e0d18 55%, #131019 100%);
+  background-size: 230px 170px, 230px 170px, 230px 170px, 230px 170px, auto, auto, auto;
+  background-repeat: repeat, repeat, repeat, repeat, no-repeat, no-repeat, no-repeat;
   color: #d9d4df;
 }
+
+body.page-about {
+  background:
+    radial-gradient(55% 38% at 50% 0%, rgba(212, 180, 131, 0.10), transparent 70%),
+    radial-gradient(42% 30% at 82% 16%, rgba(129, 140, 248, 0.09), transparent 70%),
+    linear-gradient(180deg, #12101c 0%, #131019 65%);
+  color: #d9d4df;
+}
+
+body.page-post { background: #131019; color: #d9d4df; }
 
 body.page-post .site-header,
 body.page-archive .site-header,
@@ -439,9 +469,7 @@ body.page-post .post-content h4 {
 }
 
 body.page-post .post-date,
-body.page-post .post-tags span,
-body.page-archive .post-item-date,
-body.page-archive .archive-year { color: #a29aae; }
+body.page-post .post-tags span { color: #a29aae; }
 
 body.page-post .post-content { color: #cfc9d6; }
 
@@ -470,9 +498,28 @@ body.page-post .post-content td {
 body.page-post .post-nav a { color: #a295b4; }
 body.page-post .post-nav a:hover { color: #c0a9de; }
 
-body.page-archive .post-item { border-bottom-color: rgba(255, 255, 255, 0.09); }
-body.page-archive .post-item-title { color: #d9d4df; }
-body.page-archive .post-item:hover .post-item-title { color: #c0a9de; }
+body.page-archive .post-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 18px;
+  padding: 16px 4px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+body.page-archive .post-item-title {
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  font-weight: 500;
+  color: #d9d4df;
+}
+body.page-archive .post-item-date {
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  color: #9a92ab;
+  letter-spacing: 1px;
+}
+body.page-archive .post-item:hover .post-item-title { color: #d4b483; }
 
 body.page-post .site-footer,
 body.page-archive .site-footer,
