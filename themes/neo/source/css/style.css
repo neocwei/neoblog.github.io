@@ -83,13 +83,14 @@ body {
   z-index: 10;
 }
 
-/* ---------- 首页 hero：极光夜空 ---------- */
+/* ---------- 首页 hero：极光夜空，左身份右最新文章的编辑式排版 ---------- */
 .hero {
   min-height: calc(100vh - 72px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 8vw;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  column-gap: 6vw;
+  padding: 48px 9vw 56px;
   position: relative;
   overflow: hidden;
   background: linear-gradient(175deg, #0a0f24 0%, #070a18 55%, #05070f 100%);
@@ -140,25 +141,24 @@ body {
 .hero-title {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(3.4rem, 11.5vw, 7.8rem);
+  font-size: clamp(3rem, 7.2vw, 6.2rem);
   color: #e6e3ee;
   letter-spacing: 1px;
-  line-height: 1.1;
+  line-height: 1.08;
   text-shadow: 0 2px 30px rgba(10, 15, 36, 0.55);
 }
 
 .hero-subtitle {
-  margin-top: 26px;
+  margin-top: 22px;
   color: #c3c9dd;
-  font-size: 1.1rem;
+  font-size: 1.08rem;
   font-weight: 300;
   letter-spacing: 0.5px;
 }
 
 .hero-link {
   display: inline-block;
-  align-self: flex-start;
-  margin-top: 26px;
+  margin-top: 30px;
   color: #a99fc0;
   font-size: 0.92rem;
   letter-spacing: 0.5px;
@@ -173,25 +173,30 @@ body {
   border-bottom-color: rgba(230, 227, 238, 0.7);
 }
 
+/* 右栏：最新文章，锚定右下，与左栏形成不对称平衡 */
 .hero-latest {
-  margin-top: 70px;
-  padding-top: 26px;
-  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  align-self: end;
+  justify-self: end;
+  max-width: 26rem;
+  margin-bottom: 5vh;
+  text-align: left;
 }
 
 .hero-latest-label {
   display: block;
-  font-size: 0.75rem;
-  letter-spacing: 2px;
+  font-size: 0.72rem;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
   color: #9a92ab;
 }
 
 .hero-latest-title {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 14px;
   font-family: var(--serif);
-  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.35;
   color: #e6e3ee;
   text-decoration: none;
   transition: color 0.2s;
@@ -201,10 +206,24 @@ body {
 
 .hero-latest-date {
   display: block;
-  margin-top: 6px;
+  margin-top: 10px;
   font-size: 0.85rem;
   color: #9a92ab;
   letter-spacing: 1px;
+}
+
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: 1fr;
+    align-items: start;
+    row-gap: 56px;
+    padding-top: 96px;
+    padding-bottom: 64px;
+  }
+  .hero-latest {
+    justify-self: start;
+    margin-bottom: 0;
+  }
 }
 
 
@@ -370,7 +389,7 @@ body {
   .site-header { padding: 0 16px; }
   .site-nav a { margin-left: 14px; font-size: 0.85rem; }
   .pill { padding: 6px 14px; font-size: 0.82rem; }
-  .hero { padding: 0 7vw; }
+  .hero { padding: 96px 7vw 64px; }
 }
 
 /* ---------- 文章页与归档页：暗色阅读模式 ---------- */

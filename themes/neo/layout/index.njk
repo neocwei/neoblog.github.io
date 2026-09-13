@@ -1,7 +1,9 @@
 <section class="hero">
-  <h1 class="hero-title">{{ theme.hero_title }}</h1>
-  <p class="hero-subtitle">{{ theme.hero_subtitle }}</p>
-  <a class="hero-link" href="{{ url_for('/archives/') }}">View all posts →</a>
+  <div class="hero-left">
+    <h1 class="hero-title">{{ theme.hero_title }}</h1>
+    <p class="hero-subtitle">{{ theme.hero_subtitle }}</p>
+    <a class="hero-link" href="{{ url_for('/archives/') }}">View all posts →</a>
+  </div>
   {% set posts = site.posts.toArray() %}
   {% if posts.length > 0 %}
     {% set latest = posts[0] %}
