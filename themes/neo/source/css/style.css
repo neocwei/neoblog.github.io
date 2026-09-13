@@ -155,6 +155,24 @@ body {
   letter-spacing: 0.5px;
 }
 
+.hero-link {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: 26px;
+  color: #a99fc0;
+  font-size: 0.92rem;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(169, 159, 192, 0.45);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.hero-link:hover {
+  color: #e6e3ee;
+  border-bottom-color: rgba(230, 227, 238, 0.7);
+}
+
 .hero-scroll {
   position: absolute;
   bottom: 22px;
@@ -201,18 +219,6 @@ body {
   color: var(--gray);
   letter-spacing: 1px;
 }
-
-.view-all {
-  display: block;
-  text-align: center;
-  margin-top: 22px;
-  color: var(--gray);
-  font-size: 0.88rem;
-  text-decoration: none;
-  letter-spacing: 0.5px;
-}
-
-.view-all:hover { color: #c0a9de; }
 
 /* ---------- 文章页 / 归档 / 关于 ---------- */
 .post-page {
