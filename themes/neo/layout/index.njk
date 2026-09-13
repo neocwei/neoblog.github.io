@@ -6,11 +6,14 @@
 
 <section class="content-list">
   <div class="container">
-    {% for post in site.posts.toArray() %}
-      <a class="post-item" href="{{ url_for(post.path) }}">
-        <h2 class="post-item-title">{{ post.title }}</h2>
-        <time class="post-item-date">{{ date(post.date, 'YYYY.MM.DD') }}</time>
+    {% set posts = site.posts.toArray() %}
+    {% if posts.length > 0 %}
+      {% set latest = posts[0] %}
+      <a class="post-item" href="{{ url_for(latest.path) }}">
+        <h2 class="post-item-title">{{ latest.title }}</h2>
+        <time class="post-item-date">{{ date(latest.date, 'YYYY.MM.DD') }}</time>
       </a>
-    {% endfor %}
+      <a class="view-all" href="{{ url_for('/archives/') }}">View all posts →</a>
+    {% endif %}
   </div>
 </section>
