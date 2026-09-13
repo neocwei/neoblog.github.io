@@ -1,7 +1,7 @@
 <section class="post-page">
   <div class="container container-narrow">
     <h1 class="post-title">Archives</h1>
-    {% set posts = site.posts.toArray() %}
+    {% set posts = site.posts.sort('date', -1).toArray() %}
     {% for post in posts %}
       {% if loop.first or date(post.date, 'YYYY') != date(posts[loop.index - 2].date, 'YYYY') %}
         <h2 class="archive-year">{{ date(post.date, 'YYYY') }}</h2>
